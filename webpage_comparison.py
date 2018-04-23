@@ -6,7 +6,9 @@ from lxml import etree, objectify
 
 
 def _download_webpage(url):
-    return urllib.request.urlopen(url)
+    r = urllib.request.Request(url)
+    r.add_header('User-Agent', 'Python-Webpage-Comparison/0.1')
+    return urllib.request.urlopen(r)
 
 
 def _get_xpath_content(html, xpath):
