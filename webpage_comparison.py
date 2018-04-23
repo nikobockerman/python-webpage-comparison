@@ -1,3 +1,6 @@
+
+#!/usr/bin/env python3
+
 import urllib.request
 from lxml import etree, objectify
 
